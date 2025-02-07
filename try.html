@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href= "{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+    
+    <!-- Hero Section -->
+    <div class="section flex" id="hero-section">
+        <div class="text">
+            <h1 class="primary">
+                Welcome to </span>
+            </h1>
+
+            <p class="tertiary">
+                Streamline meal planning, track schedules,
+                and ensure efficient dining experiences all in one place
+            </p>
+
+            <a href="#menu" class="btn" onclick="location.href='{{ url_for('menu') }}'">Explore Menu</a>
+        </div>
+        <div class="visual">
+            <img src="delicious-food-table.jpg" alt="" />
+        </div>
+    </div>
+    <!-- End Hero Section -->

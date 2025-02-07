@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/static/images/delicious-food-table.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    text-align: center;
+    padding: 20px;
+}
+h2 {
+    color: #333;
+    margin-top: 90px;
+}
+table {
+    width: 500px;
+    height: auto;
+    position:relative;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 18px;
+}
+th {
+    background-color: black;
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

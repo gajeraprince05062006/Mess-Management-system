@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href= "{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="menu">
+        <nav>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <ion-icon name="grid-outline"></ion-icon>
+            </label>
+
+            <label class="logo">Track & Serve</label>
+
+            <ul>
+                <li><a href="#hero-section" class="active">Home</a></li>
+                <li><a onclick="location.href='{{ url_for('menu') }}'">Menu</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a onclick="location.href='{{ url_for('adminlogin') }}'">Admin</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

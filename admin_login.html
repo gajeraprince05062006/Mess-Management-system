@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+
+    
+    <form class="form" method="POST">
+        <p class="form-title">Sign in to admin account</p>
+        <!-- Username input -->
+        <div class="input-container">
+            <input type="number" name="phone_no" placeholder="Enter Phone No" required />
+        </div>
+
+        <!-- Password input -->
+        <div class="input-container">
+            <input type="password" name="password" placeholder="Enter Password" required />
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="submit">Sign in</button>
+
+        <!-- Flash message for invalid login -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                    {% for category, message in messages %}
+                        <li style="color: red;">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        
+        <p class="signup-link">
+            No account?
+            <a onclick="location.href='{{ url_for('signup') }}'">Sign up</a>
+        </p>
+    </form>
+</body>
+
+</html>
